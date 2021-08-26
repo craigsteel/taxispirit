@@ -1,0 +1,85 @@
+{
+  "name": "taxispirit",
+  "description": "A Gulp based project.",
+  "version": "1.0.0",
+  "author": "Craig Steel Design (https://craigsteel-design.com/)",
+  "directories": {
+    "lib": "lib"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/craigsteel/taxispirit.git"
+  },
+  "scripts": {
+    "start": "gulp",
+    "build": "gulp build --prod",
+    "styles": "gulp styles",
+    "stylesRTL": "gulp stylesRTL",
+    "vendorsJS": "gulp vendorsJS",
+    "customJS": "gulp customJS",
+    "images": "gulp images",
+    "clearCache": "gulp clearCache",
+    "translate": "gulp translate",
+    "bundle": "gulp bundle --prod"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.12.3",
+    "@babel/preset-env": "^7.12.1",
+    "@babel/register": "^7.12.1",
+    "@wordpress/scripts": "^12.1.0",
+    "dir-archiver": "^1.1.1",
+    "node-sass": "^4.14.1",
+    "rtlcss": "^2.5.0",
+    "babel-loader": "^8.1.0",
+    "browser-sync": "^2.26.13",
+    "del": "^6.0.0",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^6.0.0",
+    "gulp-babel": "^8.0.0",
+    "gulp-cache": "^1.0.2",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-concat": "^2.5.2",
+    "gulp-filter": "^5.1.0",
+    "gulp-if": "^3.0.0",
+    "gulp-imagemin": "^4.1.0",
+    "gulp-line-ending-corrector": "^1.0.1",
+    "gulp-merge-media-queries": "^0.2.1",
+    "gulp-next": "^1.0.9",
+    "gulp-notify": "^3.0.0",
+    "gulp-plumber": "^1.2.0",
+    "gulp-remember": "^1.0.1",
+    "gulp-rename": "^1.2.0",
+    "gulp-replace": "^1.0.0",
+    "gulp-rtlcss": "^1.2.0",
+    "gulp-sass": "^4.1.0",
+    "gulp-sort": "^2.0.0",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-uglify": "^3.0.2",
+    "gulp-uglifycss": "^1.0.6",
+    "gulp-wp-pot": "^2.0.7",
+    "gulp-zip": "^5.0.2",
+    "webpack-stream": "^6.1.0",
+    "yargs": "^16.1.0"
+  },
+  "dependencies": {
+    "babel": "^6.23.0",
+    "detect-it": "^4.0.0",
+    "event-from": "^0.3.0",
+    "jquery": "^3.5.1",
+    "loader": "^2.1.1"
+  },
+  "rtlcssConfig": {
+    "options": {
+      "autoRename": false,
+      "autoRenameStrict": false,
+      "blacklist": {},
+      "clean": true,
+      "greedy": false,
+      "processUrls": false,
+      "stringMap": []
+    },
+    "plugins": [],
+    "map": false
+  }
+}

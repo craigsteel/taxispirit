@@ -1,0 +1,124 @@
+@mixin clearfix {
+
+    &::after {
+		    content: '';
+		    display: table;
+		    clear: both;
+	  }
+}
+
+@mixin border($style, $color, $sides) {
+    @if ($style != "") {
+
+        @if ($sides == "") {
+            border: $style $color;
+
+        } @else {
+            @each $side in $sides {
+               @if ($side == 'top' or
+                    $side == 'right' or
+                    $side == 'bottom' or
+                    $side == 'left') {
+
+                    border-#{$side}: $style $color;
+                }
+            }
+        }  
+
+    }
+}
+
+  @mixin more {
+      text-align: center;
+      a {
+      text-decoration: none;
+      }
+  }
+
+@mixin read-more-btn {
+  position: absolute;
+  bottom: 2%;
+  left: 0;
+  width: 50%;
+  background: rgba($taxi-green, 1);
+  height: 10%;
+  z-index: 777;
+  text-align: center;
+  padding-top: 10px;
+  transition: $ease;
+  text-decoration: none;
+  margin-left: 25%;
+  color: $white;
+    &:hover {
+    background: rgba($taxi-red, 1);
+  }
+}
+
+@mixin shadow {
+  box-shadow: -0px -30px 20px -30px rgba(0, 0, 0, 0.08), -10px 30px 15px -30px rgba(0, 0, 0, 0.08);
+  }
+
+
+@mixin hover-shadow {
+    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s linear 0s;
+    &:hover {
+    box-shadow: 0px 1px 20px 0px rgba(0, 0, 0, 0.2);
+  }
+}
+
+
+  @mixin arrow-round {
+      position: absolute;
+      z-index: 999;
+      background: $green-grey;
+      width: 45px;
+      height: 45px;
+      border-radius: 100%;
+      font-size: 16px;
+      right: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+// Center block
+@mixin center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@mixin absCenter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  background-color: $white;
+}
+
+@mixin bg-image {
+  height: 100%;
+  cursor: pointer;
+  display: block;
+  position: relative;
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+@mixin alpha-attribute($attribute, $color, $background) {
+  $percent: alpha($color) * 100%;
+  $opaque: opacify($color, 1);
+  $solid-color: mix($opaque, $background, $percent);
+  #{$attribute}: $solid-color;
+  #{$attribute}: $color;
+}

@@ -1,0 +1,97 @@
+/*!
+Theme Name: taxispirit
+Theme URI: http://github.com/taxi-spirit/
+Author: craig steel design
+Author URI: https://craigsteel-design.com/
+Description: A new theme for Taxi Spirit. Micro distillery based in East London producing quality white Rum and Gin.
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: taxispirit
+Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+
+Taxi Spirit is based on Underscores https://underscores.me/, (C) 2012-2017 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
+*/
+
+/*--------------------------------------------------------------
+# Variables
+--------------------------------------------------------------*/
+@import "variables";
+
+/*--------------------------------------------------------------
+# Mixins
+--------------------------------------------------------------*/
+@import "mixins/grid";
+@import "mixins/animations";
+@import "mixins/sticky-header";
+@import "mixins/transitions";
+@import "mixins/typography";
+@import "mixins/buttons";
+@import "mixins/helpers";
+
+/*--------------------------------------------------------------
+# Base
+--------------------------------------------------------------*/
+@import "base/normalize";
+@import "base/containers";
+@import "base/grid";
+@import "base/spacing";
+@import "base/copy";
+@import "base/elements";
+@import "base/global";
+@import "base/forms";
+@import "base/alignments";
+@import "base/archive";
+
+/*--------------------------------------------------------------
+# Navigation
+--------------------------------------------------------------*/
+@import "navigation/navigation";
+
+/*--------------------------------------------------------------
+# Partials
+--------------------------------------------------------------*/
+@import "partials/typography";
+@import "partials/icon-fonts";
+@import "partials/buttons";
+@import "partials/helpers";
+
+/*--------------------------------------------------------------
+# Components
+--------------------------------------------------------------*/
+@import "components/header";
+@import "components/sidebar";
+@import "components/home-banner";
+@import "components/our-story";
+@import "components/stay-in-touch";
+@import "components/contact-page";
+@import "components/footer";
+@import "components/popup";
+@import "components/comments";
+@import "components/widgets";
+@import "components/complete-projects";
+@import "components/mailchimp";
+@import "components/single-post-nav";
+@import "components/experience-block";
+@import "components/experience-page";
+
+/*--------------------------------------------------------------
+# Media
+--------------------------------------------------------------*/
+@import "media/media";
+
+/*--------------------------------------------------------------
+# Pages
+--------------------------------------------------------------*/
+@import "post-and-pages/pages";
+@import "post-and-pages/posts";
+@import "woocommerce";
+
+.countdown {
+	display: none !important;
+}
+

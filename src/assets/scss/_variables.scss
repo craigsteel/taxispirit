@@ -1,0 +1,86 @@
+/*-------------------------
+*  Grid
+*--------------------------*/
+$columns: 12;
+$gutter: 10px;
+$spacing: 20;
+
+/*-------------------------
+*  Spacing
+*--------------------------*/
+$paddings: ("pt": "padding-top", "pr": "padding-right", "pb": "padding-bottom", "pl": "padding-left");
+$margins: ("mt": "margin-top", "mr": "margin-right", "mb": "margin-bottom", "ml": "margin-left");
+
+/*-------------------------
+*  Media Queries
+*--------------------------*/
+$xs: 480px;
+$sm: 600px;
+$md: 800px;
+$mdl: 950px;
+$lg: 1190px;
+$xl: 1440px;
+$xxl: 1700px;
+
+$breakpoints: ("xs": $xs, "sm": $sm, "md": $md, "mdl": $mdl,"lg": $lg, "xl": $xl);
+
+/*-------------------------
+*  Colours
+*--------------------------*/
+$white: #fff;
+$black: #000;
+$light-grey: #f0f0f0;
+$mid-grey: #9f9f9f;
+$red-grey: #695556;
+$green-grey: #55695f;
+$taxi-red: #eb3c2e;
+$taxi-red-dark: #911c08;
+$taxi-green: #80a26a;
+$color__border-abbr: #666;
+$color__background-pre: #EEE;
+$color__background-ins: #fff9C0;
+$light-grey: #ccc;
+$grey: #666; //MID GREY
+$csd: #edc025;
+$banner-bg-grey: #e6e6e6;
+
+// custom colours
+
+$colours: ("white": $white, "black": $black, "light-grey": $light-grey);
+
+/*-------------------------
+*  Navigation
+*--------------------------*/
+$color__interactive: #b51c35;
+
+/*-------------------------
+*  Typography
+*--------------------------*/
+$base-font: "Poppins", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+$base-fs: 13px;
+$font__line-height-pre: 1.6;
+
+/*-------------------------
+*  Animations
+*--------------------------*/
+$time: 320ms;
+$time_slow: 700ms;
+
+$swing: cubic-bezier(0.55, 0, 0.1, 1);
+$swift: cubic-bezier(0.4, 0, 0.2, 1);
+$ease: ease;
+
+$transition-default: all $time $ease;
+
+/*-------------------------
+*  Border
+*--------------------------*/
+$border-default: 1px solid $taxi-green;
+
+$size__max-width: 1080px;
+
+$size__ratio-small: 30%;
+$size__ratio-large: 60%;
+
+$query__small: 600px;
+$query__medium: 900px;

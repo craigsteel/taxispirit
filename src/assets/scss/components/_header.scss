@@ -1,0 +1,64 @@
+.header-image {
+	max-height: 60vh;
+	overflow: hidden;
+
+	img {
+		display: block;
+		width: 100vw;
+	}
+}
+
+.site-header {
+	position: fixed;
+	font-family: $base-font;
+	max-width: 100%;
+	background: rgba($white, 0.5);
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 110px;
+
+	@include admin-sticky-fix;
+	@include border(10px solid, $white, top right left);
+	z-index: 9999;
+
+	@include transition(all $time $ease);
+}
+
+.site-header.black {
+	background-color: rgba($white, .8);
+	height: 85px;
+}
+
+.site-branding {
+	display: flex;
+	justify-content: center;
+}
+
+.custom-logo-link {
+
+	img {
+		display: block;
+		height: 110px;
+		width: auto;
+		transition: 0.3s;
+	}
+}
+
+.black .custom-logo-link {
+
+	img {
+		height: 60px;
+		padding-top: 0.5em;
+	}
+}
+
+.site-branding__text,
+.site-title,
+.site-description {
+	display: none;
+}
+
+img.custom-logo {
+	width: 7em;
+}

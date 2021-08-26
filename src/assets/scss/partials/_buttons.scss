@@ -1,0 +1,79 @@
+button,
+input [type="button"],
+input [type="reset"],
+input [type="submit"] {
+
+	@include transition(all $time $ease);
+}
+
+.btn {
+
+	@include main-btn;
+	@extend .h3;
+
+	&:active {
+		box-shadow: none;
+	}
+
+	&:focus {
+		outline: none;
+	}
+
+	&.btn-sm {
+		padding: ($gutter * 0.8) ($gutter * 1.8);
+
+		@extend .h5;
+	}
+
+	&.btn-xs {
+		padding: ($gutter * 0.8) ($gutter * 1.8);
+
+		@include font-size(13px, 13px, 0.4px);
+	}
+
+	&.btn-xxs {
+		padding: ($gutter * 0.6) $gutter;
+
+		@include font-size(11px, 11px, 0.4px);
+	}
+}
+
+// Buttons Home Page
+
+.home-btn:link,
+.home-btn:visited {
+	display: none;
+
+	@media screen and (min-width: $sm) {
+
+		@include main-btn;
+		position: relative;
+		margin-left: 10;
+	}
+}
+
+// .home-dark-btn:link,
+// .home-dark-btn:visited {
+// 	// display: none;
+
+// 	@media screen and (min-width: $sm) {
+
+// 		@include main-dark-btn;
+// 		position: relative;
+// 		margin-left: 10;
+// 	}
+// }
+
+.home-btn-mobile:link,
+.home-btn-mobile:visited {
+
+	@include main-btn;
+	position: absolute;
+	bottom: 5%;
+	left: 50%;
+	transform: translate(-50%, 0);
+
+	@media screen and (min-width: $sm) {
+		display: none;
+	}
+}

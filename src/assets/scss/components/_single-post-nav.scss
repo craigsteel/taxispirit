@@ -1,0 +1,170 @@
+.post-nav {
+	position: relative;
+	display: block;
+	clear: both;
+	margin: 10px 0;
+	width: 100%;
+
+	@include transition(all $time $ease);
+
+	@media screen and (min-width: $md) {
+		margin: 1em;
+	}
+
+	&__overlay {
+
+		@include alpha-attribute("background-color", rgba($black, 0.5), $white);
+		position: absolute;
+		opacity: 1;
+		height: 135px;
+		top: 1em;
+		left: 1em;
+		right: 1em;
+		bottom: 1em;
+		padding: 1em;
+
+		@include transition(all $time $ease);
+
+		@media screen and (min-width: $md) {
+			height: 217px;
+			padding: 2em;
+
+		}
+
+		&:hover,
+		&:focus {
+
+			@include alpha-attribute("background-color", rgba($black, 0.8), $white);
+			opacity: 1;
+			top: 0.5em;
+			left: 0.5em;
+			right: 0.5em;
+			bottom: 0.5em;
+		}
+	}
+
+	&__previous {
+		float: left;
+		text-align: center;
+		overflow: hidden;
+		width: 100%;
+		height: 165px;
+		// border: 0.5px solid $mid-grey;
+
+		@include shadow;
+		margin: 1em 0;
+		padding-bottom: 1em;
+
+		a {
+			color: $white;
+		}
+
+		@media screen and (min-width: $md) {
+			width: 48%;
+			text-align: left;
+			margin: 0;
+			height: 260px;
+			overflow: hidden;
+		}
+
+		&:hover {
+			box-shadow: 0 1px 35px 0 rgba($black, 0.2);
+		}
+
+		&--heading {
+			position: relative;
+			margin-top: .5em;
+
+			a {
+
+				@include font-size(25px, 20px, 0);
+				padding: 0 1em;
+				color: $white;
+				text-align: center;
+
+				@media screen and (min-width: $md) {
+
+					@include font-size(28px, 28px, 0);
+					margin-bottom: 0.5em;
+					text-align: left;
+					padding: 0;
+				}
+			}
+		}
+
+		&--cont {
+
+			a {
+				display: none;
+
+				@media screen and (min-width: $md) {
+
+					color: $white;
+					display: block;
+					margin: 0;
+				}
+			}
+		}
+	}
+
+	&__next {
+		float: right;
+		text-align: center;
+		width: 100%;
+		height: 165px;
+		overflow: hidden;
+		@include shadow;
+		margin: 1em 0;
+		padding-bottom: 1em;
+
+		@media screen and (min-width: $md) {
+			width: 48%;
+			text-align: right;
+			height: 260px;
+			overflow: hidden;
+			margin: 0;
+		}
+
+		a {
+			color: $white;
+		}
+
+		&:hover {
+			box-shadow: 0 1px 35px 0 rgba($black, 0.2);
+		}
+
+		&--heading {
+			position: relative;
+			margin-top: .5em;
+
+			a {
+
+				@include font-size(25px, 20px, 0);
+				padding: 0;
+				color: $white;
+				text-align: center;
+
+				@media screen and (min-width: $md) {
+
+					@include font-size(28px, 28px, 0);
+					margin-bottom: 0.5em;
+					text-align: right;
+				}
+			}
+		}
+
+		&--cont {
+
+			a {
+				display: none;
+
+				@media screen and (min-width: $md) {
+
+					color: $white;
+					display: block;
+					margin: 0;
+				}
+			}
+		}
+	}
+}

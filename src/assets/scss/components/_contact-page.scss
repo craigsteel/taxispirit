@@ -1,0 +1,82 @@
+.contact {
+
+	h3, h2 {
+		@include font-size(22px, 26px, 0px);
+	}
+
+	&__privacy {
+		padding-top: 1em;
+		@include font-size(13px, 16px, .5px);
+		margin-bottom: 3em;
+	}
+
+	p {
+		@include font-size(14px, 20px, .5px);
+		font-weight: 400;
+		margin-bottom: 1em;
+
+	}
+}
+
+@media screen and (min-width: $sm) {
+	
+	.contact {
+		margin: 0 10em;
+		padding: 0 0;
+		@include bg-image;
+
+		h3 {
+			@include font-size(34px, 34px, 0px);
+			margin-bottom: 0;
+		}
+
+		&__privacy {
+			padding-top: 1em;
+			@include font-size(12px, 14px, .5px);
+			margin-bottom: 4em;
+		}
+
+		&__main-content {
+			margin: 4em 0;
+			text-align: center;
+
+			&--head {
+				@include font-size(20px, 40px, .5px);
+				font-weight: 600;
+				margin-bottom: 4em;
+			}
+
+			&--sub {
+				@include font-size(14px, 40px, .5px);
+				font-weight: 600;
+				margin-bottom: 4em;
+			}
+
+
+		}
+	}
+}
+
+@media screen and (min-width: $md) {
+	
+	.contact {
+		margin: 0;
+		background-image: url(../../dist/images/Contact-background.jpg);
+
+		&__privacy {
+			padding-left: 14em;
+			padding-right: 14em;
+		}
+
+		h6 {
+			@include font-size(20px, 30px, .5px);
+			font-weight: 300;
+			margin-bottom: 1em;
+		}
+
+		p {
+			@include font-size(12px, 20px, .5px);
+			margin-bottom: 0;
+		}
+	}
+}

@@ -1,0 +1,90 @@
+.site-footer {
+	position: relative;
+	padding: 1em 2em;
+	display: block;
+	background: $black;
+	color: $white;
+	// width: 100%;
+
+	&__contact {
+
+		@include font-size(17px, 26px, 1px);
+		text-align: left;
+		color: $white;
+	}
+
+	&__info {
+
+		@include font-size(10px, 14px, 1px);
+		text-align: center;
+
+		a {
+			color: $white;
+			display: block;
+			text-decoration: none;
+
+			&:hover,
+			&:focus {
+				color: $taxi-red;
+			}
+		}
+	}
+}
+
+.menu-footer {
+	position: relative;
+	letter-spacing: 1px;
+	text-align: left;
+	text-transform: uppercase;
+
+	ul.menu {
+		padding-bottom: 0;
+	}
+
+	li {
+		padding-bottom: 0.5em;
+	}
+
+	a {
+
+		@include font-size(18px, 30px, 1px);
+		color: $white;
+		text-decoration: none;
+
+		&:hover,
+		&:focus {
+			color: $taxi-red;
+		}
+	}
+}
+
+@media screen and (min-width: $mdl) {
+
+	.site-footer {
+
+		&__contact {
+
+			@include font-size(12px, 15px, 1px);
+			text-align: center;
+		}
+	}
+
+	.menu-footer {
+
+		ul.menu {
+			display: flex;
+			justify-content: center;
+		}
+
+		li {
+			padding: 0.1em;
+
+			::after {
+				content: "•"; /*don't miss the space*/
+				padding-left: 0.4em;
+				padding-right: 0;
+				font-size: 1.2em;
+			}
+		}
+	}
+}

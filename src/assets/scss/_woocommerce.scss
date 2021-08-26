@@ -1,0 +1,277 @@
+.woocommerce .product form.cart .button {
+
+	@include font-size(14px, 26px, 1px);
+	@include transition(all $time $ease);
+	@include border(1px solid, $mid-grey, top bottom right left);
+	display: inline-block;
+	padding: ($gutter * 1) ($gutter * 2);
+	text-transform: uppercase;
+	background: transparent;
+	border-radius: 10px;
+	color: $black;
+
+	&:hover {
+		background-color: $taxi-red;
+		color: $white;
+		border: none;
+	}
+}
+
+.woocommerce-product-details {
+
+	&__short-description {
+
+		h3 {
+			font-weight: 300;
+		}
+
+		h5 {
+
+			@include font-size(13px, 20px, 1px);
+			font-weight: 500;
+			margin-bottom: 0;
+		}
+
+		p {
+
+			@include font-size(13px, 20px, 1px);
+			font-weight: 300;
+		}
+	}
+}
+
+.woocommerce-Tabs-panel,
+.related.products {
+
+	h2 {
+
+		@include font-size(22px, 27px, 1px);
+		text-align: left;
+		font-weight: 300;
+	}
+
+	h4 {
+
+		@include font-size(16px, 19px, 1px);
+		font-weight: 500;
+		margin-bottom: 0.5em;
+	}
+}
+
+.woocommerce-product-gallery__image {
+	margin: 1em;
+}
+
+.woocommerce .product {
+	margin-bottom: 0;
+	position: relative;
+
+	.product_title {
+		clear: none;
+		margin-top: 0;
+		padding: 0;
+	}
+
+	p.price,
+	.price {
+
+		@include font-size(38px!important, 38px, 1px);
+		color: $taxi-green;
+		margin-bottom: 0;
+	}
+
+	p.price ins,
+	.price ins {
+		background: inherit;
+		font-weight: 700;
+		display: inline-block;
+	}
+
+	p.price del,
+	.price del {
+		opacity: 0.5;
+		display: inline-block;
+	}
+
+	p.stock {
+		font-size: 0.92em;
+	}
+
+	.stock.in-stock {
+		color: $taxi-green;
+	}
+
+	.out-of-stock {
+		color: $taxi-red;
+	}
+
+	.onsale {
+		top: 8em;
+		left: 2em;
+	}
+
+	.woocommerce-product-rating {
+		margin-bottom: 1.618em;
+	}
+
+	.images {
+		margin-bottom: 2em;
+		margin-top: 3em;
+
+		img {
+			display: block;
+			width: 100%;
+			height: auto;
+			-webkit-box-shadow: none;
+			box-shadow: none;
+		}
+
+		.thumbnails {
+			padding-top: 1em;
+		}
+	}
+}
+
+.woocommerce ul.products {
+
+	li.product {
+
+		.price {
+
+			@include font-size(24px!important, 38px, 1px);
+			color: $taxi-green;
+			display: block;
+			font-weight: 400;
+			margin-bottom: 0.5em;
+		}
+
+		.price del {
+			color: inherit;
+			opacity: 0.5;
+			display: inline-block;
+		}
+
+		.price ins {
+			background: 0 0;
+			font-weight: 700;
+			display: inline-block;
+		}
+
+		.price .from {
+			font-size: 0.67em;
+			margin: -2px 0 0 0;
+			text-transform: uppercase;
+			color: rgba(132, 132, 132, .5)
+		}
+
+		.button {
+			margin-top: 0;
+
+			&:hover {
+				color: $white;
+			}
+		}
+	}
+}
+
+a.checkout-button.button.alt.wc-forward {
+	background-color: $white;
+	color: $black;
+
+	&:hover {
+		background-color: $taxi-green;
+		color: $white;
+	}
+}
+
+button#place_order {
+	background-color: $taxi-green;
+}
+
+.woocommerce {
+
+	#respond input#submit,
+	a.button,
+	button.button,
+	input.button {
+		font-size: 100%;
+		margin: 0;
+		line-height: 1;
+		cursor: pointer;
+		position: relative;
+		text-decoration: none;
+		overflow: visible;
+		padding: .618em 1em;
+		font-weight: 400;
+		border-radius: 12px;
+		left: auto;
+		color: #515151;
+		background-color: transparent;
+		border: $border-default;
+		display: inline-block;
+		background-image: none;
+		-webkit-box-shadow: none;
+		box-shadow: none;
+		text-shadow: none;
+
+		&:hover {
+			background-color: $taxi-green;
+		}
+	}
+}
+
+@media screen and (min-width: $sm) {
+
+	.woocommerce-product-details {
+
+		&__short-description {
+
+			h3 {
+
+				@include font-size(16px, 20px, 1px);
+				margin-bottom: 0;
+			}
+
+			h5 {
+				margin-top: 1em;
+			}
+
+			// p {
+
+			// 	@include font-size(11px, 16px, 1px);
+
+			// }
+		}
+	}
+
+	.woocommerce .product {
+
+		p.price,
+		.price {
+			margin-top: 0;
+		}
+	}
+}
+
+@media screen and (min-width: $md) {
+
+	.woocommerce .product {
+
+		.summary {
+			margin-top: 5em;
+			margin-bottom: 2em;
+		}
+
+		.images {
+			margin-bottom: 2em;
+			margin-top: 5em;
+		}
+	}
+}
+
+.star-rating {
+	font-size: 0.857em;
+	margin: 0 auto !important;
+	color: $taxi-red;
+	padding-bottom: 0.5em;
+}

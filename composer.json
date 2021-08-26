@@ -1,0 +1,38 @@
+{
+    "name": "taxi-spirit/taxispirit",
+    "type": "wordpress-theme",
+    "description": "A new theme for Taxi Spirit. Micro distillery based in East London producing quality white Rum and Gin.",
+    "keywords": [
+        "WordPress",
+        "Themes"
+    ],
+    "homepage": "http://github.com/taxispirit/",
+    "license": "GPL-2.0-or-later",
+    "authors": [
+        {
+            "name": "Craig Steel Design",
+            "homepage": "https://craigsteel-design.com/"
+        }
+    ],
+    "require": {
+        "php": ">=5.6"
+    },
+    "require-dev": {
+        "squizlabs/php_codesniffer": "*",
+        "wp-coding-standards/wpcs": "^0.13.1",
+        "dealerdirect/phpcodesniffer-composer-installer": "^0.7.0",
+        "php-parallel-lint/php-parallel-lint": "^1.2.0",
+        "wp-cli/i18n-command": "^2.2.5"
+    },
+    "scripts": {
+        "post-install-cmd": [
+            "\"vendor/bin/phpcs\" --config-set installed_paths vendor/wp-coding-standards/wpcs"
+        ],
+        "post-update-cmd": [
+            "\"vendor/bin/phpcs\" --config-set installed_paths vendor/wp-coding-standards/wpcs"
+        ],
+        "lint:wpcs": "@php ./vendor/squizlabs/php_codesniffer/bin/phpcs",
+        "lint:php": "@php ./vendor/bin/parallel-lint --exclude .git --exclude vendor .",
+        "make-pot": "wp i18n make-pot . languages/_s.pot"
+    }
+}
