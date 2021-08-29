@@ -18,7 +18,7 @@ From your Terminal, run:
 ```bash
 git clone https://github.com/craigsteel/taxispirit.git
 
-cd fusiondb
+cd taxispirit
 npm install
 ```
 
